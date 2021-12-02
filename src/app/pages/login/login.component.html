@@ -1,16 +1,17 @@
-<!-- <form [formGroup]="loginForm"> -->
-  <!-- <input type="email" matInput formControlName="email" placeholder="correo@servicio.com" autocomplete="on"/> -->
-
 <div class="d-flex align-items-center justify-content-center vh-100 bg-image">
-  <div class="card h-50 w-50 m-auto shadow">
-    <div class="card-body">
 
+  <div class="card h-75 w-75 m-auto shadow">
+    <img src="../../../assets/logo.jpg" class="card-img-top w-5 m-auto">
+    <div class="card-body">
       <h5 class="card-title mb-4">Login</h5>
 
-      <label for="exampleFormControlInput1" class="form-label">Correo electrónico</label>
-      <input type="email" class="form-control mb-3" placeholder="correo@hotmail.com">
-      <label for="exampleFormControlInput1" class="form-label">Contraseña</label>
-      <input type="password" class="form-control">
+      <form [formGroup]="loginForm">
+        <label for="exampleFormControlInput1" class="form-label">Correo electrónico</label>
+        <input type="email" class="form-control mb-3" placeholder="correo@hotmail.com" formControlName="email">
+        <label for="exampleFormControlInput1" class="form-label">Contraseña</label>
+        <input type="password" class="form-control mb-3" placeholder="contraseña" formControlName="password">
+        <button type="button" class="btn bg-aqua" (click)="save()">Iniciar sesión</button>
+      </form>
 
       <div class="d-flex justify-content-between mt-5">
         <label>¿No tienes una cuenta?</label>

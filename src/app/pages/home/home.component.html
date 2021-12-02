@@ -7,10 +7,10 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                 <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#">Inicio</a>
+                    <a class="ms-3 nav-link {{tab=='dashboard'?'active':''}}" (click)="selectTab('dashboard')">Inicio</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Escanear</a>
+                    <a class="ms-3 nav-link {{tab=='scan'?'active':''}}" (click)="selectTab('scan')">Escanear</a>
                 </li>
                 <!-- <li class="nav-item">
                     <a class="nav-link disabled">Disabled</a>
@@ -24,3 +24,4 @@
     </div>
 </nav>
 <app-dashboard *ngIf="tab==='dashboard'"></app-dashboard>
+<app-scan *ngIf="tab==='scan'"></app-scan>

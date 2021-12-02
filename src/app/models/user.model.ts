@@ -5,5 +5,7 @@ export interface User {
     displayName: string,
     createdAt: string,
     lastLogin: string,
-    position: string,
+    address: string,
+    role: number
+    collector_type: string,   
 }

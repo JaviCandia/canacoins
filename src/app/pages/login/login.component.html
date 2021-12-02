@@ -1,49 +1,21 @@
-<div class="d-flex justify-content-center vh-100 image">
-  <div class="m-auto">
-    <label class="fw-bold fs-6 mb-4">Bienvenido</label>
-    <form [formGroup]="loginForm">
-      <div class="w-100 mb-3">
-        <label>Correo electrónico</label>
-        <input
-          type="email"
-          matInput
-          formControlName="email"
-          placeholder="correo@servicio.com"
-          autocomplete="on"
-        />
-        <div *ngIf="invalidInput('email')">
-          Ingrese una dirección de e-mail válida
-        </div>
-      </div>
+<!-- <form [formGroup]="loginForm"> -->
+  <!-- <input type="email" matInput formControlName="email" placeholder="correo@servicio.com" autocomplete="on"/> -->
 
-      <div class="w-100 mb-3">
-        <label>Contraseña</label>
-        <input
-          type="password"
-          matInput
-          formControlName="password"
-          placeholder="contraseña"
-          autocomplete="on"
-        />
-        <div *ngIf="invalidInput('password')">
-          Ingrese una contraseña válida
-        </div>
-      </div>
+<div class="d-flex align-items-center justify-content-center vh-100 bg-image">
+  <div class="card h-50 w-50 m-auto shadow">
+    <div class="card-body">
 
-      <button
-        type="button"
-        mat-raised-button
-        color="primary"
-        class="w-100 bg-primary mb-4"
-        (click)="save()"
-      >
-        Iniciar sesión
-      </button>
+      <h5 class="card-title mb-4">Login</h5>
 
-      <div class="d-flex justify-content-between">
+      <label for="exampleFormControlInput1" class="form-label">Correo electrónico</label>
+      <input type="email" class="form-control mb-3" placeholder="correo@hotmail.com">
+      <label for="exampleFormControlInput1" class="form-label">Contraseña</label>
+      <input type="password" class="form-control">
+
+      <div class="d-flex justify-content-between mt-5">
         <label>¿No tienes una cuenta?</label>
         <a routerLink="/register" class="text-primary">Registrarme</a>
       </div>
-    </form>
+    </div>
   </div>
 </div>

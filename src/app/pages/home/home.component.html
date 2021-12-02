@@ -12,6 +12,9 @@
                 <li class="nav-item">
                     <a class="ms-3 nav-link {{tab=='scan'?'active':''}}" (click)="selectTab('scan')">Escanear</a>
                 </li>
+                <li class="nav-item">
+                    <a class="ms-3 nav-link {{tab=='map'?'active':''}}" (click)="selectTab('map')">Mapa</a>
+                </li>
                 <!-- <li class="nav-item">
                     <a class="nav-link disabled">Disabled</a>
                 </li> -->
@@ -25,3 +28,4 @@
 </nav>
 <app-dashboard *ngIf="tab==='dashboard'"></app-dashboard>
 <app-scan *ngIf="tab==='scan'"></app-scan>
+<app-map *ngIf="tab==='map'"></app-map>

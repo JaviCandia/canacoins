@@ -1,0 +1,73 @@
+<div class="d-flex justify-content-center vh-100 image">
+  <div class="m-auto">
+    <label class="fw-bold fs-6 mb-4">Crear cuenta</label>
+    <form [formGroup]="registerForm">
+      <div class="w-100 mb-3">
+        <label>Correo electrónico</label>
+        <input
+          type="email"
+          matInput
+          formControlName="email"
+          placeholder="correo@servicio.com"
+          autocomplete="on"
+        />
+        <div *ngIf="invalidInput('email')">
+          Ingrese una dirección de e-mail válida
+        </div>
+      </div>
+
+      <div class="row mb-3">
+        <div class="col-6">
+            <label>Contraseña</label>
+            <input
+              type="password"
+              matInput
+              formControlName="password"
+              placeholder="contraseña"
+              autocomplete="on"
+            />
+            <div *ngIf="invalidInput('password')">
+              Ingrese una contraseña de al menos 6 caracteres
+            </div>
+          </div>
+          
+          <div class="col-6">
+            <label>Confirmar contraseña</label>
+            <input
+              type="password"
+              matInput
+              formControlName="confirmPassword"
+              placeholder="contraseña"
+            />
+            <div *ngIf="invalidConfirm()">
+              La contraseña no coincide
+            </div>
+          </div>
+      </div>
+
+      <div class="w-100 mb-3">
+        <label>Nombre completo</label>
+        <input
+          type="text"
+          matInput
+          formControlName="displayName"
+          placeholder="Javier Perez Lezama"
+          autocomplete="on"
+        />
+        <div *ngIf="invalidInput('displayName')">
+          Ingrese un nombre válido
+        </div>
+      </div>
+
+      <button
+        type="button"
+        mat-raised-button
+        color="primary"
+        class="w-100 bg-primary mb-3"
+        (click)="save()"
+      >
+        Registrarme
+      </button>
+    </form>
+  </div>
+</div>

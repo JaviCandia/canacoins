@@ -8,14 +8,14 @@ Ejecuta `ng serve` para correr el proyecto. En tu navegador escribe la direcció
 
 Hooya es una aplicación que trata de concientizar a las personas para que participen de manera activa en el reciclaje. En la aplicación se pueden encontrar pequeñas lecturas para que las personas puedan aprender un poco de educación ecológica, pero el punto clave de Hooya es que las personas sean incentivadas de manera económica y con descuentos/recompensas de comercios participantes.
 
---- cupones
+![Alt text](https://raw.githubusercontent.com/JaviCandia/canacoins/master/src/assets/snaps/cupones.png)
 
 ## Enormes posibilidades de implementación
 
 Existe la posibilidad de implementar la tecnología **Google Cloud Vision** para obtener las propiedades de los objetos que quieras escanear y obtener información adicional. Esto es una vista previa de cómo se vería la tecnología implementada:
 
---- scan
+![Alt text](https://raw.githubusercontent.com/JaviCandia/canacoins/master/src/assets/snaps/scan.png)
 
 Y retomando las tecnologías de la nube de Google, podemos ocupar **Google Maps Platform**, en específico el API *Distance Matrix API* para calcular la ruta recomendada entre los puntos de inicio y los puntos de final, calculada por la API de **Google Maps**
 
---- mapa
+![Alt text](https://raw.githubusercontent.com/JaviCandia/canacoins/master/src/assets/snaps/mapa.png)

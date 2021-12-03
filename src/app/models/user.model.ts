@@ -3,9 +3,10 @@ export interface User {
     email: string,
     password: string,
     displayName: string,
-    createdAt: string,
-    lastLogin: string,
-    address: string,
-    role: number
-    collector_type: string,   
+    createdAt?: string,
+    lastLogin?: string,
+    address?: string,
+    role: 'reciclador' | 'repartidor',
+    cash?: number,
+    collector_type?: string,   
 }

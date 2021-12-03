@@ -5,14 +5,19 @@
 export const environment = {
   production: false,
   firebaseConfig: {
-    apiKey: "AIzaSyC0ZpCZq8YBuUf-ndCJPaIr4kvGz4XaJfA",
-    authDomain: "canaco-7aa48.firebaseapp.com",
-    projectId: "canaco-7aa48",
-    storageBucket: "canaco-7aa48.appspot.com",
-    messagingSenderId: "771497561950",
-    appId: "1:771497561950:web:7020d8ae3890164d12c9cf",
-    measurementId: "G-NE0DQ4JH0K"
+    apiKey: "AIzaSyBXz9UC_ly7ztyIXRVQ5R_led-GlvQGKO4",
+    authDomain: "bwl-test-a3947.firebaseapp.com",
+    projectId: "bwl-test-a3947",
+    storageBucket: "bwl-test-a3947.appspot.com",
+    messagingSenderId: "1086699080102",
+    appId: "1:1086699080102:web:25610a64ef56ab5c07a767"
   },
+};
+
+
+// Google Cloud
+export const googlecloudvisionapi = {
+  googleCloudVisionAPIKey: "AIzaSyADXZz5nb_OnERHrIO5s256addZDT8vtWQ"
 };
 
 /*

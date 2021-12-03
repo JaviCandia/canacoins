@@ -1,4 +1,4 @@
-<div class="d-flex align-items-center justify-content-center vh-100 bg-image">
+<div class="d-flex align-items-center justify-content-center vh-100 bg-gradient-omni">
 
   <div class="card  w-75 m-auto shadow">
 
@@ -7,16 +7,27 @@
       <h5 class="card-title mb-4">Crear Cuenta</h5>
 
       <form [formGroup]="registerForm">
-        <label for="exampleFormControlInput1" class="form-label">Correo electrónico</label>
-        <input type="email" class="form-control mb-3" placeholder="correo@hotmail.com" formControlName="email">
-        <label class="form-label">Contraseña</label>
-        <input type="password" class="form-control mb-3" placeholder="contraseña" formControlName="password">
-        <label class="form-label">Confirmar Contraseña</label>
-        <input type="password" class="form-control mb-3" placeholder="confirmar contraseña" formControlName="confirmPassword">
         <label for="exampleFormControlInput1" class="form-label">Nombre completo</label>
-        <input type="text" class="form-control mb-3" placeholder="Juan Perez" formControlName="displayName">
+        <input type="text" class="form-control mb-3" placeholder="Juan Perez" formControlName="displayName" [class.is-invalid]="invalidInput('displayName')">
+        <label for="exampleFormControlInput1" class="form-label">Correo electrónico</label>
+        <input type="email" class="form-control mb-3" placeholder="correo@hotmail.com" formControlName="email" [class.is-invalid]="invalidInput('email')">
+        <div class="row">
+          <div class="col">
+            <label class="form-label">Contraseña</label>
+            <input type="password" class="form-control mb-3" placeholder="contraseña" formControlName="password" [class.is-invalid]="invalidInput('password')">
+          </div>
+          <div class="col">
+            <label class="form-label">Confirmar Contraseña</label>
+            <input type="password" class="form-control mb-3" placeholder="confirmar contraseña" formControlName="confirmPassword" [class.is-invalid]="invalidInput('confirmPassword')">
+          </div>
+        </div>
+        <label class="form-label">Rol</label>
+        <select class="form-select mb-3" formControlName="role" aria-placeholder="Selecciona el rol" [class.is-invalid]="invalidInput('role')">
+          <option value="reciclador">Reciclador</option>
+          <option value="repartidor">Repartidor</option>
+        </select>
 
-        <button type="button" class="btn bg-aqua" (click)="save()">¡Registrar!</button>
+        <button type="button" class="btn bg-aqua mb-2" (click)="save()">¡Registrar!</button>
       </form>
     </div>
   </div>

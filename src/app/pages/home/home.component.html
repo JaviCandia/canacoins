@@ -1,28 +1,53 @@
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+<!-- NavBar -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-aqua">
     <div class="container-fluid">
-        <a class="navbar-brand" href="#">Omni Collector</a>
+        <a class="navbar-brand">
+            <i class="fas fa-leaf-heart"></i>
+            Hooya
+        </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                 <li class="nav-item">
-                    <a class="ms-3 nav-link {{tab=='dashboard'?'active':''}}" (click)="selectTab('dashboard')">Inicio</a>
+                    <a class="ms-3 nav-link {{tab=='dashboard'?'active':''}}" (click)="selectTab('dashboard')">
+                        <i class="fas fa-leaf"></i>
+                        Inicio
+                    </a>
                 </li>
                 <li class="nav-item">
-                    <a class="ms-3 nav-link {{tab=='scan'?'active':''}}" (click)="selectTab('scan')">Escanear</a>
+                    <a class="ms-3 nav-link {{tab=='commerce'?'active':''}}" (click)="selectTab('commerce')">
+                        <i class="fas fa-ticket-alt"></i>
+                        Cupones
+                    </a>
                 </li>
                 <li class="nav-item">
-                    <a class="ms-3 nav-link {{tab=='map'?'active':''}}" (click)="selectTab('map')">Mapa</a>
+                    <a class="ms-3 nav-link {{tab=='scan'?'active':''}}" (click)="selectTab('scan')">
+                        <i class="fas fa-camera"></i>
+                        Escanear
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="ms-3 nav-link {{tab=='map'?'active':''}}" (click)="selectTab('map')">
+                        <i class="fas fa-truck-container"></i>
+                        Reparto
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="ms-3 nav-link {{tab=='user'?'active':''}}" (click)="selectTab('user')">
+                        <i class="fas fa-user-circle"></i>
+                        Usuario
+                    </a>
                 </li>
             </ul>
-            <form class="d-flex">
-                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                <button class="btn btn-outline-success" type="submit">Search</button>
-            </form>
         </div>
     </div>
 </nav>
+
+<!-- Components -->
 <app-dashboard *ngIf="tab==='dashboard'"></app-dashboard>
+<app-commerce *ngIf="tab==='commerce'"></app-commerce>
 <app-scan *ngIf="tab==='scan'"></app-scan>
 <app-map *ngIf="tab==='map'"></app-map>
+<app-user *ngIf="tab==='user'" [userData]="userData"></app-user>

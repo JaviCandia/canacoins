@@ -1,4 +1,4 @@
-<div class="d-flex align-items-center justify-content-center vh-100 bg-image">
+<div class="d-flex align-items-center justify-content-center vh-100 bg-gradient-omni">
 
   <div class="card h-75 w-75 m-auto shadow">
     <img src="../../../assets/logo.jpg" class="card-img-top w-5 m-auto">
@@ -7,9 +7,9 @@
 
       <form [formGroup]="loginForm">
         <label class="form-label">Correo electrónico</label>
-        <input type="email" class="form-control mb-3" placeholder="correo@hotmail.com" formControlName="email">
+        <input type="email" class="form-control mb-3" placeholder="correo@hotmail.com" formControlName="email" [class.is-invalid]="invalidInput('email')">
         <label class="form-label">Contraseña</label>
-        <input type="password" class="form-control mb-3" placeholder="contraseña" formControlName="password">
+        <input type="password" class="form-control mb-3" placeholder="contraseña" formControlName="password" [class.is-invalid]="invalidInput('password')">
         <button type="button" class="btn bg-aqua" (click)="save()">Iniciar sesión</button>
       </form>
 

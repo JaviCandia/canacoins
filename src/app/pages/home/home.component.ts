@@ -9,7 +9,8 @@ import { AuthService } from 'src/app/services/auth.service';
 })
 export class HomeComponent implements OnInit {
   tab: string = 'dashboard';
-  user!: User;
+  userFire!: User;
+  userData!: User;
 
   constructor(private authService: AuthService) {}
 
@@ -22,6 +23,11 @@ export class HomeComponent implements OnInit {
   }
 
   getUser() {
-    this.user = this.authService.userData();
+    this.userFire = this.authService.userData();
+
+    this.authService.getUsers().subscribe(users => {
+      this.userData = users.filter(user => user.email === this.userFire.email)[0];
+      console.log(this.userData);
+    });
   }
 }

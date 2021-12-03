@@ -17,7 +17,7 @@ export class AuthService {
   }
 
   // Create user with email/password
-  createUser(email: string, password: string, displayName: string) {
+  createUser(email: string, password: string, displayName: string, role: string) {
     return this.fireAuth.createUserWithEmailAndPassword(email, password)
       .then((result: any) => {
         console.log(result.user);
@@ -31,7 +31,9 @@ export class AuthService {
         this.fireStore.collection<any>('users').doc(result.user.uid).set({
           email: email,
           displayName: displayName,
-          createdAt: result.user.metadata.createdAt
+          createdAt: result.user.metadata.createdAt,
+          role: role,
+          cash: 0,
         });
 
         this.router.navigateByUrl('/login');
@@ -82,5 +84,9 @@ export class AuthService {
   // Get users
   getUsers() {
     return this.fireStore.collection<User>('users').valueChanges();
+  }
+
+  getCurrentUser(){
+    return this.fireStore.collection('users').doc(this.authState.uid).snapshotChanges();
   }
 }

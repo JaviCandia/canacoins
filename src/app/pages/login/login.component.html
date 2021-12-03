@@ -6,9 +6,9 @@
       <h5 class="card-title mb-4">Login</h5>
 
       <form [formGroup]="loginForm">
-        <label for="exampleFormControlInput1" class="form-label">Correo electrónico</label>
+        <label class="form-label">Correo electrónico</label>
         <input type="email" class="form-control mb-3" placeholder="correo@hotmail.com" formControlName="email">
-        <label for="exampleFormControlInput1" class="form-label">Contraseña</label>
+        <label class="form-label">Contraseña</label>
         <input type="password" class="form-control mb-3" placeholder="contraseña" formControlName="password">
         <button type="button" class="btn bg-aqua" (click)="save()">Iniciar sesión</button>
       </form>
